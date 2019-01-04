@@ -18,6 +18,9 @@ void setup()
     pinMode(astroLed,OUTPUT);
     pinMode(marsLed,OUTPUT);
     pinMode(issLed,OUTPUT);
+
+    RGB.control(true);  // Enable the inbuilt RGB LED.
+
 }
 
 void loop()
@@ -25,23 +28,27 @@ void loop()
  digitalWrite(astroLed,LOW);
  digitalWrite(marsLed,LOW);
  digitalWrite(issLed,LOW);
+ RGB.color(255,255,255);  // RGB = White when no event is triggered.
 }
 
 // These functions automatically show up in IFTTT
 int astronaut(String command)
 {
   digitalWrite(astroLed,HIGH);
+  RGB.color(255,255,0); // RGB = Yellowish
   delay(onTime);
 }
 
 int mars(String command)
 {
   digitalWrite(marsLed,HIGH);
+  RGB.color(255,0,0); // RGB = Red
   delay(onTime);
 }
 
 int iss(String command)
 {
   digitalWrite(issLed,HIGH);
+  RGB.color(0,0,255); // RGB = Blue
   delay(onTime);
 }

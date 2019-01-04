@@ -1,6 +1,6 @@
 ![Banner Icon made by Freepik from www.flaticon.com ](https://github.com/jonathanrjpereira/Space-Bar/blob/master/img/Banner.svg)
 
-Space Bar is a physical notification display which is triggered when a certain event occurs in Outer Space. It is an IoT project which uses @IFTTT's Space service to control the state of a @particle-iot Photon's I/O pins.
+Space Bar is a physical notification display which is triggered when a certain event occurs in Outer Space. It is an IoT project which uses IFTTT's Space service to control the state of a Particle Photon's I/O pins.
 
 ## Notifications
 
@@ -17,7 +17,7 @@ Space Bar is a physical notification display which is triggered when a certain e
 1. Web IDE to flash the Photon. [Particle Web IDE](https://build.particle.io/)
 2. IFTTT [Space Service](https://ifttt.com/space)
 
-## Working
+## Setup & Working
 After successfully flashing the program onto the [Particle Photon](https://amzn.to/2C3PWPp), you will need to create three new applets using the IFTTT space service. For each applet choose the 'This' service as 'Space' and the 'That' service as 'Particle'.
 
 For each Space trigger select either "Astronaut enters space", "Season changes on Mars" or "ISS passes over a specific location". Remember to choose a location for the third trigger.
@@ -25,6 +25,8 @@ For each Space trigger select either "Astronaut enters space", "Season changes o
 For each Particle action select "Call a function". Then for each of applet choose a different 'Function Name' from either "astronaut", "mars" or "iss" and then click Finish.
 
 Connect the [White LED's](https://amzn.to/2R7nhn6) as given in the circuit schematic & you're done!
+
+The Photon's inbuilt RGB LED is used for debugging purposes. It will change color whenever a new event is triggered.
 
 ## Contributing
 
